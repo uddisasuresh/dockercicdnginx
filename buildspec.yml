@@ -11,6 +11,6 @@ phases:
   post_build:
     commands:
       - docker push 061051227245.dkr.ecr.us-east-1.amazonaws.com/mycustomnginx:latest
-      - printf '[{"name":"mynode","imageUri":"%s"}]' <ECR-REPo-NAME> > imagedefinitions.json
+      - printf '[{"name":"mynode","imageUri":"%s"}]' mycustomnginx > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
