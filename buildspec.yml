@@ -11,6 +11,6 @@ phases:
   post_build:
     commands:
       - docker push 061051227245.dkr.ecr.us-east-1.amazonaws.com/mycustomnginx:latest
-      - printf '[{"name":"%s","imageUri":"%s"}]' telugu-yt-ecs-td 061051227245.dkr.ecr.us-east-1.amazonaws.com/mycustomnginx > imagedefinitions.json
+      - printf '[{"name":"%s","imageUri":"%s"}]' customnginx 061051227245.dkr.ecr.us-east-1.amazonaws.com/mycustomnginx > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
